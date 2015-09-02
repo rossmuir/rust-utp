@@ -1,16 +1,33 @@
 [package]
 
-name = "utp"
-version = "0.6.0"
+name = "temp_utp"
+version = "0.6.5"
 authors = ["Ricardo Martins <ricardo@scarybox.net>"]
 
-description = "A µTP (Micro/uTorrent Transport Library) library implemented in Rust"
-homepage = "https://github.com/meqif/rust-utp"
-repository = "https://github.com/meqif/rust-utp"
-documentation = "http://meqif.github.io/rust-utp"
+description = "Temporary fork of rust-utp. See https://github.com/meqif/rust-utp/pull/10"
+homepage = "https://github.com/maidsafe/rust-utp"
+repository = "https://github.com/maidsafe/rust-utp"
 readme = "README.md"
 license = "MIT/Apache-2.0"
 keywords = ["utp", "networking", "protocol", "transport"]
+
+[target.x86_64-unknown-linux-gnu.dependencies]
+nix = "^0.3.8"
+
+[target.i686-unknown-linux-gnu.dependencies]
+nix = "^0.3.8"
+
+[target.x86_64-apple-darwin.dependencies]
+nix = "^0.3.8"
+
+[target.i686-apple-darwin.dependencies]
+nix = "^0.3.8"
+
+[target.i686-pc-windows-gnu.dependencies]
+libc = "*"
+
+[target.x86_64-pc-windows-gnu.dependencies]
+libc = "*"
 
 [dependencies]
 time = "*"
@@ -18,10 +35,6 @@ num = "*"
 log = "0.3"
 env_logger = "0.3"
 rand = "0.3"
-
-[dependencies.with_read_timeout]
-path = "with_read_timeout"
-version = "*"
 
 [dev-dependencies]
 quickcheck = "*"
