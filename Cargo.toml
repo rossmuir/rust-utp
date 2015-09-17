@@ -1,7 +1,7 @@
 [package]
 
 name = "temp_utp"
-version = "0.6.6"
+version = "0.6.7"
 authors = ["Ricardo Martins <ricardo@scarybox.net>"]
 
 description = "Temporary fork of rust-utp. See https://github.com/meqif/rust-utp/pull/10"
